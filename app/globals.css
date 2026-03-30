@@ -1,26 +1,159 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0911;
+  --foreground: #A1A1A1;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-montserrat);
+  --color-primary: #FFF422;
+  --color-paragraph: var(--text-paragraph);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 
 body {
-  background: var(--background);
+  /* background: var(--background); */
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+/* ── Header nav links ── */
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header ul li {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  display: inline-block;
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+header ul li a,
+header ul li {
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header ul li:hover {
+  color: #fff422;
+}
+
+header ul li.active {
+  color: #fff422;
+}
+
+/* ── Blob glow behind desktop nav ── */
+.blob {
+  position: absolute;
+  width: 110%;
+  height: 50%;
+  border-radius: 20px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(150px);
+  opacity: 0.4;
+  z-index: -10;
+}
+
+/* ── Gradient border button ── */
+.gradient-button {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 12px;
+  background:
+    linear-gradient(#0a0911, #0a0911) padding-box,
+    linear-gradient(45deg, rgba(175, 153, 255, 0.5), rgba(255, 244, 34, 0.5)) border-box;
+  border: 2px solid transparent;
+  transition:
+    background 0.5s ease-in-out,
+    border-color 0.5s ease-in-out;
+}
+
+.gradient-button:hover {
+  background:
+    linear-gradient(#0a0911, #0a0911) padding-box,
+    linear-gradient(45deg, #af99ff, #fff422) border-box;
+}
+
+/* Animated fill that sweeps in from the left on hover */
+.gradient-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, rgba(175, 153, 255, 0.2), rgba(255, 244, 34, 0.2));
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.gradient-button:hover .gradient-bg {
+  transform: translateX(0);
+}
+
+/* Text sits above the animated fill */
+.button-text {
+  position: relative;
+  z-index: 10;
+}
+
+section {
+  padding: 0;
+}
+
+
+/* ── Statistics card glass effect ── */
+.statistics-card {
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(175, 153, 255, 0.08));
+  backdrop-filter: blur(1.5px);
+}
+
+/* ── Mobile sidebar background ── */
+.sidebar {
+  background: linear-gradient(to right, #0a0911, #0a0911f5);
+  will-change: transform;
+}
+
+/* ── About Us card glass effect ── */
+.about-card {
+  background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(175, 153, 255, 0.08));
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid;
+    border-color: rgb(175 153 255 / 0.15);
+    ;
+}
+
+.about-card:hover {
+  background: linear-gradient(360deg,
+            rgba(255, 255, 255, 0),
+            rgba(175, 153, 255, 0.4));
+    transform: translateY(-3px) !important;
 }
