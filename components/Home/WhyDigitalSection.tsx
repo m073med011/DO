@@ -1,69 +1,73 @@
-import Image from "next/image";
+import Image from "@/components/shared/CustomImage";
 import AboutUsCard from "./AboutUsCard";
-
-const whyDigitalCards = [
-  {
-    id: 1,
-    title: "Custom Solutions",
-    description: "Flexible digital plans tailored to meet your specific goal",
-  },
-  {
-    id: 2,
-    title: "Clear Results",
-    description: "Tangible improvements that elevate your business performance.",
-  },
-  {
-    id: 3,
-    title: "Ongoing Innovation",
-    description: "Bold ideas + advanced tech = unconventional digital solutions.",
-  },
-  {
-    id: 4,
-    title: "Lasting Partnership",
-    description:
-      "Sustainable growth through continuous support and mutual trust.",
-  },
-];
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export default function WhyDigitalSection() {
+  const t = useTranslations("WhyDigital");
+
+  const whyDigitalCards = [
+    {
+      id: 1,
+      title: t("cards.card1_title"),
+      description: t("cards.card1_desc"),
+    },
+    {
+      id: 2,
+      title: t("cards.card2_title"),
+      description: t("cards.card2_desc"),
+    },
+    {
+      id: 3,
+      title: t("cards.card3_title"),
+      description: t("cards.card3_desc"),
+    },
+    {
+      id: 4,
+      title: t("cards.card4_title"),
+      description: t("cards.card4_desc"),
+    },
+  ];
+
   return (
     <section className="relative flex flex-col overflow-hidden px-11 py-20 sm:px-7 xl:min-h-dvh xl:py-0">
       {/* Background blob glow */}
       <div
-        className="pointer-events-none absolute inset-0 z-0"
+        className="pointer-events-none absolute rounded-lg inset-0 z-0"
         aria-hidden="true"
       >
-        <div className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 rounded-[20px] bg-primary opacity-5 blur-[150px]" />
+        {/* <div className="absolute left-1/2 top-1/2 rounded-lg w-[100%] h-[100%] -translate-x-1/2 -translate-y-1/2  bg-primary opacity-5 blur-[150px]" /> */}
       </div>
 
       <div className="relative flex flex-1 items-center">
         <div className="mx-auto w-full max-w-[1384px] flex-1">
           <div className="container mx-auto h-full">
             <div className="relative  flex flex-col items-center gap-14 xl:flex-row xl:items-center xl:justify-between xl:gap-75">
-
               {/* Left — text block */}
               <div
                 data-aos="fade-up"
                 data-aos-duration="600"
                 className="relative z-40 w-full xl:max-w-[430px] p-5 lg:p-0 "
               >
-                <h1 className="mb-4 flex flex-wrap justify-center xl:justify-start font-bold text-white leading-tight text-center xl:text-left" style={{ fontSize: 'clamp(0.1rem, 5vw, 3rem)' }}>
-                  We Don&apos;t Just Offer Services — We Create Real Digital
-                  Value
+                <h1
+                  className="mb-4 flex flex-wrap justify-center xl:justify-start font-bold text-white leading-tight text-center xl:text-left"
+                  style={{ fontSize: "clamp(0.1rem, 5vw, 3rem)" }}
+                >
+                  {t("title")}
                 </h1>
-                <p className="mb-8 text-white/60 text-center xl:text-left" style={{ fontSize: 'clamp(0.8rem, 3.5vw, 1.125rem)' }}>
-                  At Digital Order, we blend technical expertise with creative
-                  thinking — and collaborate closely with you — to deliver
-                  tailored digital solutions that drive growth, deliver real
-                  results, and shape a sustainable digital future.
+                <p
+                  className="mb-8 text-white/60 text-center xl:text-left"
+                  style={{ fontSize: "clamp(0.8rem, 3.5vw, 1.125rem)" }}
+                >
+                  {t("description")}
                 </p>
 
                 {/* Explore link */}
-                <a
+                <Link
                   href="/company"
                   className="group relative flex w-fit mx-auto xl:mx-0 cursor-pointer items-center gap-4 py-2 pr-4 text-white"
                 >
-                  <span className="text-sm font-normal">Explore Our Story</span>
+                  <span className="text-sm font-normal">{t("explore")}</span>
                   <span className="relative z-20 transition-all duration-300 ease-in-out group-hover:translate-x-0.5">
                     <Image
                       src="/arrow.svg"
@@ -74,7 +78,7 @@ export default function WhyDigitalSection() {
                     />
                   </span>
                   <div className="absolute right-1 top-0.5 z-10 h-8 w-8 rounded-full border-2 border-primary bg-transparent opacity-20 transition-all duration-300 ease-in-out group-hover:opacity-40" />
-                </a>
+                </Link>
               </div>
 
               {/* Right — cards grid */}
@@ -110,7 +114,9 @@ export default function WhyDigitalSection() {
                       data-aos="fade-up"
                       data-aos-duration="600"
                       data-aos-delay={index * 100}
-                      className={card.id === 2 || card.id === 4 ? "md:mt-7" : ""}
+                      className={
+                        card.id === 2 || card.id === 4 ? "md:mt-7" : ""
+                      }
                     >
                       <AboutUsCard
                         title={card.title}
@@ -121,7 +127,6 @@ export default function WhyDigitalSection() {
                   ))}
                 </div>
               </div>
-
             </div>
           </div>
         </div>

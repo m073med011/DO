@@ -1,12 +1,15 @@
 "use client";
 
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
 interface CompanyHeroProps {
   onScrollToSection: (sectionId: string) => void;
 }
 
 export default function CompanyHero({ onScrollToSection }: CompanyHeroProps) {
+  const t = useTranslations("Company.hero");
+
   return (
     <div className=" relative flex h-[calc(100dvh-120px)] md:h-[calc(100dvh-168px)]">
       <div className="flex items-center justify-center">
@@ -17,7 +20,7 @@ export default function CompanyHero({ onScrollToSection }: CompanyHeroProps) {
             data-aos-delay="150"
             className="text-2xl font-semibold text-white max-md:text-center md:text-4xl md:font-semibold md:leading-[50.4px] lg:text-6xl lg:font-bold lg:leading-[78px]"
           >
-            DO: Where Ideas Become Digital Reality. Not Just Dreams.
+            {t("title")}
           </h1>
           <p 
             data-aos="fade-up" 
@@ -25,7 +28,7 @@ export default function CompanyHero({ onScrollToSection }: CompanyHeroProps) {
             data-aos-delay="350"
             className="mb-8 mt-4 text-sm text-paragraph max-md:text-center lg:text-base"
           >
-            At DO, We Don’t Just Imagine The Future — We Build It. We Turn Ideas Into Bold Digital Solutions Through Strategy, Design, And Collaboration.
+            {t("description")}
           </p>
           <div 
             data-aos="fade-up" 
@@ -41,7 +44,7 @@ export default function CompanyHero({ onScrollToSection }: CompanyHeroProps) {
           data-aos-duration="900"
           data-aos-delay="450"
         >
-          Start Your Digital Journey
+          {t("cta")}
         </button>
           </div>
         </div>

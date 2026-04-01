@@ -1,7 +1,10 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from '@/components/shared/CustomImage';
+import { useTranslations } from 'next-intl';
 
 const PartnersSection = () => {
+  const t = useTranslations("Company.partners");
+
   const partners = [
     "twitter", "Discord", "instagram", "Snapchat", "AppleMusic", "Behance",
     "twitch", "TikTok", "twitter", "Discord", "instagram", "Snapchat",
@@ -15,8 +18,9 @@ const PartnersSection = () => {
     <section className="my-[clamp(2.5rem,15vw,18rem)] w-full">
       <div className="mb-14 text-center px-4">
         <h2 className="text-[22px] md:text-[32px] font-semibold text-white leading-snug tracking-wide">
-          Partners Who Don&apos;t Just Dream — They DO, <br className="hidden md:block"/>
-          <span className="md:hidden"> </span>And Build the Future
+          {t.rich("title", {
+            br: () => <br className="hidden md:block"/>
+          })}
         </h2>
       </div>
 
@@ -60,3 +64,4 @@ const PartnersSection = () => {
 };
 
 export default PartnersSection;
+

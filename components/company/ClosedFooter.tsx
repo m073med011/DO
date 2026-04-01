@@ -1,6 +1,6 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import Image from "@/components/shared/CustomImage";
+import { Link } from "@/i18n/routing";
 
 interface ClosedFooterProps {
   title: string;
@@ -70,3 +70,4 @@ const ClosedFooter: React.FC<ClosedFooterProps> = ({
 };
 
 export default ClosedFooter;
+

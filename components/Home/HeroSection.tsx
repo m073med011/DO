@@ -1,6 +1,9 @@
-import Image from "next/image";
+import Image from "@/components/shared/CustomImage";
+import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
+  const t = useTranslations("Hero");
+
   return (
     <div className="relative flex h-[calc(100dvh-56px)] md:h-[calc(100dvh-136px)]">
       {/* Main content */}
@@ -19,7 +22,7 @@ export default function HeroSection() {
           data-aos-delay="150"
           className="text-2xl font-bold text-white md:text-4xl lg:text-6xl lg:leading-[78px]!"
         >
-          Providing End-to-End Digital Solutions Across Tech And Marketing
+          {t('title')}
         </h1>
 
         <p
@@ -28,8 +31,7 @@ export default function HeroSection() {
           data-aos-delay="350"
           className="mt-4 w-full text-sm lg:text-base font-normal text-paragraph md:max-w-[664px]"
         >
-          We craft exceptional digital experiences that elevate your brand
-          presence, combining creativity, technology, and smart marketing.
+          {t('description')}
         </p>
 
         <button
@@ -40,7 +42,7 @@ export default function HeroSection() {
           data-aos-duration="900"
           data-aos-delay="450"
         >
-          Start Your Digital Journey
+          {t('cta')}
         </button>
       </div>
 

@@ -1,19 +1,22 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from '@/components/shared/CustomImage';
+import { useTranslations } from 'next-intl';
 
 export default function ProcessSection() {
+  const t = useTranslations("Solutions.process");
+
   const cards = [
     {
-      title: "Implement & Support",
-      description: "We Execute The Project With Quality, Providing Ongoing Support And Updates For Sustainable Growth."
+      title: t("items.implement.title"),
+      description: t("items.implement.description")
     },
     {
-      title: "Identify & Strategize",
-      description: "We Understand Your Situation, Analyze Challenges, And Explore Opportunities To Create A Clear Roadmap."
+      title: t("items.strategize.title"),
+      description: t("items.strategize.description")
     },
     {
-      title: "Ideate & Solve",
-      description: "We Turn Your Ideas Into Practical Digital Solutions That Reflect Your Brand And Reach Your Audience."
+      title: t("items.solve.title"),
+      description: t("items.solve.description")
     }
   ];
 
@@ -22,8 +25,9 @@ export default function ProcessSection() {
       <div className="relative z-10 mx-auto max-w-[1345px] px-5 flex flex-col items-center">
         {/* Title */}
         <h2 className="text-center text-2xl font-semibold text-white md:text-4xl lg:text-[40px] leading-tight mb-16" data-aos="fade-up" data-aos-duration="800">
-          From Vision to Execution,<br />
-          A Process That Makes a Difference
+          {t.rich("title", {
+            br: () => <br />
+          })}
         </h2>
 
         {/* Central Graphic */}
@@ -78,3 +82,4 @@ export default function ProcessSection() {
     </div>
   );
 }
+

@@ -1,13 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
-
-const tabs = [
-  "Design",
-  "Photography & Production",
-  "Digital Marketing",
-  "Development",
-];
+import Image from "@/components/shared/CustomImage";
+import { useTranslations } from "next-intl";
 
 const tabTools: Record<number, string[]> = {
   0: [
@@ -43,19 +37,25 @@ const tabTools: Record<number, string[]> = {
 
 export default function AdvancedTools() {
   const [activeTab, setActiveTab] = useState(0);
+  const t = useTranslations("Solutions.tools");
+
+  const tabs = [
+    t("tabs.design"),
+    t("tabs.photo"),
+    t("tabs.marketing"),
+    t("tabs.dev"),
+  ];
 
   return (
     <section className="w-full mb-[clamp(2.5rem,15vw,18rem)]">
       <div className="mx-auto max-w-[1345px] px-5">
         {/* Top Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6 md:gap-8 mb-12 md:mb-16">
+        <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-start gap-6 md:gap-8 mb-12 md:mb-16">
           <h2 className="text-3xl md:text-[40px] font-semibold md:max-w-[400px] leading-snug basis-1/2" data-aos="fade-up" data-aos-duration="800">
-            We Use Advanced Tools For Professional Results
+            {t("title")}
           </h2>
           <p className="text-paragraph text-sm md:text-base md:max-w-[500px] basis-1/2 leading-relaxed" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
-            Our team relies on the latest tools and tech to ensure quality work
-            and diverse solutions. We use tools that boost collaboration and
-            speed up design and development for the best outcomes.
+            {t("description")}
           </p>
         </div>
 
@@ -72,7 +72,7 @@ export default function AdvancedTools() {
                 <button
                   key={idx}
                   onClick={() => setActiveTab(idx)}
-                  className={`px-5 py-2.5 md:px-6 md:py-3 rounded-xl text-left transition-all duration-300 whitespace-nowrap md:whitespace-normal font-medium text-sm md:text-base ${
+                  className={`px-5 py-2.5 md:px-6 md:py-3 rounded-xl text-start transition-all duration-300 whitespace-nowrap md:whitespace-normal font-medium text-sm md:text-base ${
                     isActive
                       ? "bg-primary text-[#0c0c11]"
                       : "text-paragraph hover:text-white bg-transparent"
@@ -116,3 +116,4 @@ export default function AdvancedTools() {
     </section>
   );
 }
+

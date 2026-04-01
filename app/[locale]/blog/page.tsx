@@ -2,16 +2,7 @@
 
 import { useState } from "react";
 import ClosedFooter from "@/components/company/ClosedFooter";
-
-const categories = [
-  "All",
-  "Marketing",
-  "Design",
-  "Development",
-  "AI Trends",
-  "Startup",
-  "Case Studies"
-];
+import { useTranslations } from "next-intl";
 
 const blogPosts = [
   {
@@ -89,7 +80,20 @@ const blogPosts = [
 ];
 
 export default function Blog() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const t = useTranslations("Blog");
+  const tFooter = useTranslations("ClosedFooter");
+  
+  const categories = [
+    { id: "all", label: t("categories.all") },
+    { id: "marketing", label: t("categories.marketing") },
+    { id: "design", label: t("categories.design") },
+    { id: "development", label: t("categories.development") },
+    { id: "ai", label: t("categories.ai") },
+    { id: "startup", label: t("categories.startup") },
+    { id: "case", label: t("categories.case") }
+  ];
+
+  const [activeCategory, setActiveCategory] = useState("all");
 
   return (
     <main className="relative flex flex-col overflow-hidden px-5 py-20 xl:py-32 xl:pt-40 min-h-dvh">
@@ -111,7 +115,7 @@ export default function Blog() {
             className="mb-6 font-bold text-white leading-tight" 
             style={{ fontSize: 'clamp(1.5rem, 4vw, 3rem)' }}
           >
-            The Digital Content Hub For Entrepreneurs And Decision-Makers.
+            {t("title")}
           </h1>
           <p 
             data-aos="fade-up" 
@@ -120,7 +124,7 @@ export default function Blog() {
             className="text-white/60 max-w-3xl" 
             style={{ fontSize: 'clamp(0.875rem, 2vw, 1.125rem)' }}
           >
-            At The Digital Skills Blog, We Share Strategic Knowledge And Well-Crafted Articles Covering Digital Marketing, AI Trends, Startup Insights, And Real-World Case Studies.
+            {t("description")}
           </p>
         </div>
 
@@ -133,15 +137,15 @@ export default function Blog() {
         >
           {categories.map((category) => (
             <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
               className={`snap-start whitespace-nowrap px-6 py-2.5 rounded-xl text-sm transition-all duration-300 shrink-0 ${
-                activeCategory === category
+                activeCategory === category.id
                   ? "bg-primary text-black font-semibold"
                   : "bg-[#13121d] border border-white/5 text-white/60 hover:text-white hover:border-white/20"
               }`}
             >
-              {category}
+              {category.label}
             </button>
           ))}
         </div>
@@ -199,10 +203,10 @@ export default function Blog() {
       </div>
       <ClosedFooter 
           link="/contact" 
-          title="Ready To Make A Real Impact?" 
-          description="Grow Your Business With Smart Digital Solutions, Or Join A Team That Leads Change With Creativity. Your Journey Starts Here — With Digital Order."
-          bottomOneTitle="Join as a Client" 
-          bottomTwoTitle="Join the Team" 
+          title={tFooter("title")} 
+          description={tFooter("description")}
+          bottomOneTitle={tFooter("bottomOneTitle")} 
+          bottomTwoTitle={tFooter("bottomTwoTitle")} 
         />
     </main>
   );

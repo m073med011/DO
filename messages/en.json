@@ -1,0 +1,575 @@
+{
+  "Hero": {
+    "title": "Providing End-to-End Digital Solutions Across Tech And Marketing",
+    "description": "We craft exceptional digital experiences that elevate your brand presence, combining creativity, technology, and smart marketing.",
+    "cta": "Start Your Digital Journey"
+  },
+  "Statistics": {
+    "expYears": "Years of Experience",
+    "smartSolutions": "Smart Solutions",
+    "successPartners": "Success Partners",
+    "successfulProjects": "Successful Projects",
+    "skilledExperts": "Skilled Experts"
+  },
+  "WhyDigital": {
+    "title": "We Don't Just Offer Services — We Create Real Digital Value",
+    "description": "At Digital Order, we blend technical expertise with creative thinking — and collaborate closely with you — to deliver tailored digital solutions that drive growth, deliver real results, and shape a sustainable digital future.",
+    "explore": "Explore Our Story",
+    "cards": {
+      "card1_title": "Custom Solutions",
+      "card1_desc": "Flexible digital plans tailored to meet your specific goal",
+      "card2_title": "Clear Results",
+      "card2_desc": "Tangible improvements that elevate your business performance.",
+      "card3_title": "Ongoing Innovation",
+      "card3_desc": "Bold ideas + advanced tech = unconventional digital solutions.",
+      "card4_title": "Lasting Partnership",
+      "card4_desc": "Sustainable growth through continuous support and mutual trust."
+    }
+  },
+  "FocusedSolutions": {
+    "title": "Smart, Scalable, and Focused Solutions That Make A Difference",
+    "explore": "Explore Our Solutions",
+    "solutions": {
+      "creative": {
+        "title": "Creative Solutions",
+        "description": "We Create Unique Ideas And Solutions That Fit Your Business Needs And Support Brand Growth."
+      },
+      "digital": {
+        "title": "Digital Engineering",
+        "description": "We Build Advanced Digital Systems That Ensure Strong Performance And High Flexibility To Support Your Business."
+      },
+      "customer": {
+        "title": "Customer Experience",
+        "description": "We Design Seamless Digital Experiences That Enhance Customer Satisfaction And Strengthen Your Relationship."
+      },
+      "growth": {
+        "title": "Growth Solutions",
+        "description": "We Provide Innovative Strategies To Help You Expand Your Business And Increase Profits Smartly."
+      },
+      "workspace": {
+        "title": "Work Space",
+        "description": "We Provide Integrated Digital Workspaces That Facilitate Collaboration And Improve Team Productivity."
+      }
+    }
+  },
+  "Privacy": {
+    "title": "Privacy Policy – Digital Order",
+    "description": "At Digital Order, we value and protect the privacy of our users. This page explains how we collect, use, and protect the personal information you provide to us. This policy covers our website, services, and all associated digital platforms.",
+    "lastUpdated": "Last Updated: Jan 2025",
+    "sections": [
+      {
+        "id": 1,
+        "title": "Information We Collect",
+        "anchor": "info-collect",
+        "intro": "When you use the Digital Order website, we may collect the following information:",
+        "items": [
+          "Full name",
+          "Email address",
+          "Phone number",
+          "Company or business name",
+          "Website browsing data (via cookies)"
+        ]
+      },
+      {
+        "id": 2,
+        "title": "How We Use the Information",
+        "anchor": "info-use",
+        "intro": "We use the information we collect to:",
+        "items": [
+          "Process your inquiries and provide marketing services",
+          "Improve website quality and user experience",
+          "Send promotional offers or updates related to our services (if you agree)",
+          "Customize marketing campaigns based on your interests"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Information Protection",
+        "anchor": "info-protection",
+        "description": "We are committed to protecting your personal data through advanced technical and organizational security measures to prevent unauthorized access, use, modifications, or disclosure."
+      },
+      {
+        "id": 4,
+        "title": "Information Sharing",
+        "anchor": "info-sharing",
+        "intro": "We do not sell or share your personal information with third parties, except in the following cases:",
+        "items": [
+          "To provide services on our behalf (such as hosting or analytics companies under confidentiality agreements)",
+          "When required by law to comply with legal requirements"
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Cookies",
+        "anchor": "cookies",
+        "description": "Our website uses cookies to enhance user experience and analyze visitor behavior. You can control cookie settings through your browser."
+      },
+      {
+        "id": 6,
+        "title": "Your Rights",
+        "anchor": "your-rights",
+        "intro": "You have the right at any time to:",
+        "items": [
+          "Request access to your personal data",
+          "Request modification or deletion of your data",
+          "Unsubscribe from email communications"
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Changes to This Policy",
+        "anchor": "policy-changes",
+        "description": "We reserve the right to update this policy at any time. Any updates will be posted on this page with a revised date."
+      },
+      {
+        "id": 8,
+        "title": "Contact Us",
+        "anchor": "contact-us",
+        "intro": "If you have any questions about this Privacy Policy, feel free to contact us:"
+      }
+    ],
+    "footer": {
+      "title": "You Care About The Details — Now Your Next Step Is Up To You.",
+      "description": "This policy reflects our commitment to you — clarity, security, and transparency in every interaction.",
+      "cta1": "Return to Homepage",
+      "cta2": "Explore Our Solutions"
+    },
+    "toc": "Table of Contents"
+  },
+  "FAQs": {
+    "title": "Frequently Asked Questions About Our Digital Services In Saudi Arabia",
+    "description": "Here You Find Answers To Common Questions To Common Questions, Find Answers With Clients In Saudi Arabia And Beyond.",
+    "categories": {
+      "all": "All",
+      "services": "Services",
+      "clients": "Clients",
+      "pricing": "Pricing & Contracts",
+      "market": "Saudi Market",
+      "reach": "Reach more"
+    },
+    "questions": [
+      {
+        "id": 1,
+        "category": "services",
+        "question": "How Long Does It Take To Get A Response?",
+        "answer": "We typically respond to all inquiries within 24 hours on business days. For urgent matters, you can reach us directly through our contact channels and we'll do our best to get back to you as soon as possible."
+      },
+      {
+        "id": 2,
+        "category": "services",
+        "question": "Can I Contact You Without A Clear Idea?",
+        "answer": "You can come to us without a clear idea from the very first step — even if your idea is still taking shape. Our team will guide you through the process, help you define your vision, and craft a strategy tailored to your goals."
+      },
+      {
+        "id": 3,
+        "category": "clients",
+        "question": "Do You Work With Clients Outside Saudi Arabia?",
+        "answer": "Yes, we serve clients globally. While our core focus is on the Saudi and GCC markets, we have successfully partnered with businesses across the Middle East, North Africa, Europe, and beyond."
+      },
+      {
+        "id": 4,
+        "category": "pricing",
+        "question": "How much does it cost to build a website in Saudi Arabia?",
+        "answer": "Website costs vary significantly based on complexity, features, and scope. A simple informational site may start from a few thousand SAR, while custom enterprise-grade solutions are priced based on a detailed discovery session. Contact us for a tailored quote."
+      },
+      {
+        "id": 5,
+        "category": "services",
+        "question": "Do you offer digital marketing for startups?",
+        "answer": "Absolutely. We have dedicated startup packages that cover branding, social media management, content creation, and performance marketing — all designed to help new businesses build their presence fast and efficiently."
+      },
+      {
+        "id": 6,
+        "category": "services",
+        "question": "What's the difference between custom development and templates?",
+        "answer": "Custom development means we build your project from scratch to match your exact requirements, giving you full flexibility and scalability. Templates are pre-designed layouts that are faster and more affordable, but may have design and functionality limitations."
+      },
+      {
+        "id": 7,
+        "category": "services",
+        "question": "Can the entire project be done remotely?",
+        "answer": "Yes. Our team is fully equipped to deliver complete projects remotely, from initial discovery and strategy sessions to design, development, and launch. We use structured communication tools and regular check-ins to keep everything on track."
+      },
+      {
+        "id": 8,
+        "category": "market",
+        "question": "What are the most requested services in Saudi Arabia?",
+        "answer": "In the Saudi market, the most in-demand services include website development, UI/UX design, social media management, SEO, and e-commerce solutions. Vision 2030 has also increased demand for digital transformation consulting."
+      },
+      {
+        "id": 9,
+        "category": "services",
+        "question": "Do you offer brand identity design?",
+        "answer": "Yes, we offer comprehensive brand identity packages including logo design, color palettes, typography systems, brand guidelines, and visual assets — everything you need to build a consistent and memorable brand."
+      },
+      {
+        "id": 10,
+        "category": "services",
+        "question": "Do you manage social media accounts?",
+        "answer": "Yes. Our social media management service includes content strategy, post creation, scheduling, community management, and monthly performance reporting across all major platforms including Instagram, LinkedIn, X (Twitter), and TikTok."
+      }
+    ],
+    "footer": {
+      "title": "Still Have Questions?",
+      "description": "Can't find the answer you're looking for? Our team is happy to help you with any questions about our digital services in Saudi Arabia.",
+      "cta1": "Contact Us",
+      "cta2": "See Our Services"
+    }
+  },
+  "ContactUs": {
+    "title": "Have An Idea, Request, Or Question? {br} Let's Connect.",
+    "description": "We are excited to hear from you! Let's get down to your needs, we'll follow up shortly to keep things moving.",
+    "info": {
+      "email": "info@homedo.email.com",
+      "phone": "(00) 0123 456 7890",
+      "address": "Riyadh, Al Olaya St. 28H, Alazzam 12. Building No 342",
+      "hours": "Working Hours: 10 AM - 6 PM (Sun-Thu)"
+    },
+    "form": {
+      "fullName": "Full Name",
+      "namePlaceholder": "Name Surname",
+      "email": "Email",
+      "emailPlaceholder": "e.g. name@domain.com",
+      "phone": "Phone Number (Optional)",
+      "phonePlaceholder": "e.g. +966 50 000 000",
+      "serviceType": "Service Type",
+      "servicePlaceholder": "Select Help With Type ...",
+      "services": {
+        "general": "General Inquiry",
+        "project": "Project Request",
+        "support": "Support"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Write your email here...",
+      "send": "Send Message"
+    },
+    "faqsTitle": "Have A Question Before You Send Your Message?",
+    "faqs": [
+      {
+        "question": "How Long Does It Take To Get A Response?",
+        "answer": "We typically respond within 24-48 business hours."
+      },
+      {
+        "question": "Can I Contact You Without A Clear Idea?",
+        "answer": "You're in the right place! We started the same way! Your idea is our starting point."
+      },
+      {
+        "question": "Do You Work With Clients Outside Saudi Arabia?",
+        "answer": "Yes, we work with clients globally to deliver digital impact."
+      }
+    ],
+    "seeMore": "See More FAQs",
+    "bottomTitle": "Based In KSA — Broad Digital Impact."
+  },
+  "Blog": {
+    "title": "The Digital Content Hub For Entrepreneurs And Decision-Makers.",
+    "description": "At The Digital Skills Blog, We Share Strategic Knowledge And Well-Crafted Articles Covering Digital Marketing, AI Trends, Startup Insights, And Real-World Case Studies.",
+    "categories": {
+      "all": "All",
+      "marketing": "Marketing",
+      "design": "Design",
+      "development": "Development",
+      "ai": "AI Trends",
+      "startup": "Startup",
+      "case": "Case Studies"
+    }
+  },
+  "Solutions": {
+    "hero": {
+      "title": "We Turn Challenges Into Creativity{br} and Dreams Into Digital Reality",
+      "description": "Smart, Creative Digital Solutions That Move Your Ideas Forward With Real Impact And Lasting Value.",
+      "cta": "Explore Our Solutions",
+      "partnership": "Partnership",
+      "customization": "Customization",
+      "integration": "Integration",
+      "creative": "Creative",
+      "innovation": "Innovation"
+    },
+    "process": {
+      "title": "From Vision to Execution,{br} A Process That Makes a Difference",
+      "items": {
+        "implement": {
+          "title": "Implement & Support",
+          "description": "We Execute The Project With Quality, Providing Ongoing Support And Updates For Sustainable Growth."
+        },
+        "strategize": {
+          "title": "Identify & Strategize",
+          "description": "We Understand Your Situation, Analyze Challenges, And Explore Opportunities To Create A Clear Roadmap."
+        },
+        "solve": {
+          "title": "Ideate & Solve",
+          "description": "We Turn Your Ideas Into Practical Digital Solutions That Reflect Your Brand And Reach Your Audience."
+        }
+      }
+    },
+    "creative": {
+      "categories": {
+        "creative": {
+          "name": "Creative Solutions",
+          "tag": "Creative Solutions",
+          "title": "Creative Solutions Designed To Turn Your Ideas Into Reality.",
+          "cards": {
+            "visual": "Visual Identity",
+            "guidelines": "Brand Guidelines",
+            "verbal": "Verbal Identity",
+            "naming": "Naming & Taglines",
+            "writing": "Writing",
+            "voice": "Voice Over",
+            "animation": "Animation Design",
+            "media": "Media Production"
+          }
+        },
+        "digital": {
+          "name": "Digital Engineering",
+          "tag": "Digital Engineering",
+          "title": "Digital Engineering Built to Power Your Business Forward.",
+          "cards": {
+            "web": "Web Development",
+            "mobile": "Mobile Apps",
+            "cloud": "Cloud Solutions",
+            "api": "API Integration",
+            "devops": "DevOps",
+            "qa": "QA & Testing",
+            "microservices": "Microservices",
+            "data": "Data Engineering"
+          }
+        },
+        "customer": {
+          "name": "Customer Experience",
+          "tag": "Customer Experience",
+          "title": "Exceptional Experiences That Keep Customers Coming Back.",
+          "cards": {
+            "research": "UX Research",
+            "ui": "UI Design",
+            "usability": "Usability Testing",
+            "journey": "Journey Mapping",
+            "prototyping": "Prototyping",
+            "ab": "A/B Testing",
+            "strategy": "CX Strategy",
+            "support": "Support Systems"
+          }
+        },
+        "growth": {
+          "name": "Growth Solutions",
+          "tag": "Growth Solutions",
+          "title": "Data-Driven Growth Strategies That Deliver Results.",
+          "cards": {
+            "seo": "SEO & Content",
+            "paid": "Paid Media",
+            "analytics": "Analytics",
+            "conversion": "Conversion Rate",
+            "email": "Email Marketing",
+            "social": "Social Media",
+            "influencer": "Influencer",
+            "market": "Market Research"
+          }
+        },
+        "workspace": {
+          "name": "Work Space",
+          "tag": "Work Space",
+          "title": "Collaborative Workspaces Designed for High Performance.",
+          "cards": {
+            "collaboration": "Team Collaboration",
+            "management": "Project Management",
+            "remote": "Remote Workflows",
+            "culture": "Culture Building",
+            "hr": "HR Tools",
+            "knowledge": "Knowledge Base",
+            "onboarding": "Onboarding",
+            "performance": "Performance Mgmt"
+          }
+        }
+      }
+    },
+    "tools": {
+      "title": "We Use Advanced Tools For Professional Results",
+      "description": "Our team relies on the latest tools and tech to ensure quality work and diverse solutions. We use tools that boost collaboration and speed up design and development for the best outcomes.",
+      "tabs": {
+        "design": "Design",
+        "photo": "Photography & Production",
+        "marketing": "Digital Marketing",
+        "dev": "Development"
+      }
+    }
+  },
+  "Company": {
+    "hero": {
+      "title": "DO: Where Ideas Become Digital Reality. Not Just Dreams.",
+      "description": "At DO, We Don’t Just Imagine The Future — We Build It. We Turn Ideas Into Bold Digital Solutions Through Strategy, Design, And Collaboration.",
+      "cta": "Start Your Digital Journey"
+    },
+    "vision": {
+      "title": "Digital Order: Where Vision Meets Innovation.",
+      "slogan1": "We Don’t Just Dream — We Make Dreams Happen.",
+      "description": "At Digital Order, We Turn Bold Ideas Into Real Digital Solutions By Combining Creativity With Advanced Technology To Build A Strong Presence, Improve Performance, And Drive Sustainable Growth.",
+      "explore": "Explore Our Solutions",
+      "visionTitle": "Our Vision",
+      "visionText": "To Be The Leading Digital Partner, Empowering Businesses To Thrive In A Constantly Evolving Digital World.",
+      "missionTitle": "Our Mission",
+      "missionText": "To Revolutionize Businesses With Innovative Digital Solutions That Drive Growth And Efficiency."
+    },
+    "values": {
+      "mainTitle": "Core Values",
+      "items": {
+        "innovation": {
+          "title": "Innovation",
+          "description": "We strive to create cutting-edge solutions that transform businesses."
+        },
+        "customer": {
+          "title": "Customer-Centricity",
+          "description": "Our Clients’ Success Is At The Heart Of Everything We Do."
+        },
+        "excellence": {
+          "title": "Excellence",
+          "description": "We Are Committed To Delivering Top-Notch Results In Everything We Do."
+        },
+        "integrity": {
+          "title": "Integrity",
+          "description": "We Operate With Honesty And Transparency In All Our Interactions."
+        },
+        "collaboration": {
+          "title": "Collaboration",
+          "description": "We Believe In The Power Of Collaboration To Achieve Shared Goals."
+        }
+      }
+    },
+    "journey": {
+      "title": "DO... A Journey That Started With a Dream{br} and Keeps Powering Forward",
+      "items": {
+        "2014": "We began with a bold vision to digitize real business dreams",
+        "2016": "We built our core team and delivered our first success stories",
+        "2018": "We expanded our services and entered more competitive digital markets",
+        "2020": "We reshaped how we work, think, and create",
+        "2023": "We strengthened our partnerships and scaled our impact across industries",
+        "2025": "We rebranded to reflect our vision, growth, and future goals"
+      }
+    },
+    "cycle": {
+      "title": "We Craft Exceptional Experiences By Working {br} With The Best Team — For The Best Clients.",
+      "build": "Build",
+      "manage": "Manage",
+      "launch": "Launch",
+      "forTeam": "For Team",
+      "forClients": "For Clients",
+      "teamItems": [
+        "All-in-one tools for productivity",
+        "Continuous growth & support",
+        "Space for innovation & bold ideas",
+        "Clear goals & ownership",
+        "Culture built on trust and impact"
+      ],
+      "clientItems": [
+        "Real results, delivered fast",
+        "Transparent communication",
+        "Insightful reports & analytics",
+        "Consistent brand experience",
+        "One partner for all digital needs"
+      ]
+    },
+    "numbers": {
+      "title": "Numbers That {br} Tell Our Success.",
+      "description": "Our success shows in numbers. Every stat tells a story of progress and real value. These numbers show our true impact.",
+      "explore": "Explore Our Work",
+      "exp": "Years Of Experience",
+      "team": "Team",
+      "solutions": "Solutions",
+      "clients": "Clients"
+    },
+    "partners": {
+      "title": "Partners Who Don't Just Dream — They DO, {br} And Build the Future"
+    }
+  },
+  "Career": {
+    "metadata": {
+      "title": "Career - Home Do",
+      "description": "Join our global team of self-driven creators and doers."
+    },
+    "hero": {
+      "title": "Looking For A Role Where You Can {br} Make An Impact?",
+      "description1": "A Global Team Of Self-Driven Creators And Doers. A Culture Of Open Collaboration...",
+      "description2": "If This Sounds Like Your Kind Of Place, We Want To Meet You."
+    },
+    "different": {
+      "title": "What Makes Us Different?",
+      "features": {
+        "quality": {
+          "title": "True Quality",
+          "description": "We focus on precise outcomes and meaningful work."
+        },
+        "communication": {
+          "title": "Clear Communication",
+          "description": "We work transparently and align on expectations."
+        },
+        "growth": {
+          "title": "Ongoing Growth",
+          "description": "We offer real opportunities for skill development."
+        },
+        "results": {
+          "title": "Real Results",
+          "description": "Success is measured by tangible, lasting impact."
+        },
+        "impact": {
+          "title": "Meaningful Impact",
+          "description": "Every voice matters — And helps shape what we build."
+        }
+      }
+    },
+    "roles": {
+      "title": "Available Roles",
+      "items": {
+        "designer_mid": {
+          "title": "UI/UX Designer",
+          "description": "Looking for a mid-level designer ready to take on the world of web and app design. The ideal...",
+          "location": "Remote",
+          "type": "Full Time",
+          "level": "Entry Level"
+        },
+        "designer_senior": {
+          "title": "UI/UX Designer",
+          "description": "Looking for a senior UI/UX designer ready to take on the world of web and app design...",
+          "location": "Remote",
+          "type": "Full Time",
+          "level": "Entry Level"
+        }
+      }
+    }
+  },
+  "ClosedFooter": {
+    "title": "Ready To Make A Real Impact?",
+    "description": "Grow Your Business With Smart Digital Solutions, Or Join A Team That Leads Change With Creativity. Your Journey Starts Here — With Digital Order.",
+    "bottomOneTitle": "Join as a Client",
+    "bottomTwoTitle": "Join the Team"
+  },
+  "Header": {
+    "getInTouch": "Get in Touch",
+    "nav": {
+      "Home": "Home",
+      "Company": "Company",
+      "Solutions": "Solutions",
+      "Portfolio": "Portfolio",
+      "Blog": "Blog",
+      "Studio": "Studio"
+    }
+  },
+  "Footer": {
+    "slogan1": "Don't Just Dream. DO",
+    "slogan2": "Creativity That Makes a Digital Impact",
+    "addressTitle": "Address",
+    "addressText": "Jeddah - Al Hamra Dist. - Falasteen St. - Building No. 3047",
+    "getInTouch": "Get in Touch",
+    "quickLinks": "Quick Links",
+    "support": "Support",
+    "rights": "All rights reserved for DO © {year} — Designed and developed by",
+    "nav": {
+      "About Us": "About Us",
+      "Solutions": "Solutions",
+      "Portfolio": "Portfolio",
+      "Blog": "Blog",
+      "Career": "Career",
+      "FAQs": "FAQs",
+      "Contact": "Contact",
+      "Privacy": "Privacy",
+      "Terms": "Terms"
+    }
+  }
+}

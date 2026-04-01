@@ -1,39 +1,45 @@
 "use client";
 
 import React from 'react';
-import Image from 'next/image';
+import Image from '@/components/shared/CustomImage';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 
 const NumberSuccess = () => {
+  const t = useTranslations("Company.numbers");
+
   return (
     <section className="my-[clamp(2.5rem,15vw,18rem)] relative overflow-hidden text-white" id="NumberSuccess">
       {/* Centered Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary rounded-full blur-2xl opacity-10   md:blur-[150px] pointer-events-none z-0"></div>
+      {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary rounded-full blur-2xl opacity-10   md:blur-[150px] pointer-events-none z-0"></div> */}
 
       <div className="flex flex-col md:flex-row items-center md:items-stretch justify-between gap-12 md:gap-8 w-full relative z-10">
         
         {/* Left Content Area */}
         <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left z-10">
           <h2 className="text-[32px] md:text-4xl lg:text-5xl font-semibold leading-tight mb-5" data-aos="fade-up" data-aos-duration="800">
-            Numbers That
-            <br className="hidden md:block" /> Tell Our Success.
+            {t.rich("title", {
+              br: () => <br className="hidden md:block" />
+            })}
           </h2>
           <p className="text-[#a1a1a1] text-sm md:text-base lg:text-lg max-w-[400px] mb-8 leading-[1.6]" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
-            Our success shows in numbers. Every stat tells a story of progress and real value. These numbers show our true impact.
+            {t("description")}
           </p>
           
-          <button 
+          <Link 
+            href="/portfolio"
             className="flex items-center gap-3 text-white text-sm hover:text-primary transition-colors group mt-2"
             data-aos="fade-up" 
             data-aos-duration="800" 
             data-aos-delay="300"
           >
-            <span className="font-medium text-[15px]">Explore Our Work</span>
+            <span className="font-medium text-[15px]">{t("explore")}</span>
             <span className="flex items-center justify-center w-8 h-8 rounded-full border border-white/20 group-hover:border-primary/50 group-hover:bg-white/5 transition-all">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </span>
-          </button>
+          </Link>
         </div>
 
         {/* Right Cards Area */}
@@ -62,7 +68,7 @@ const NumberSuccess = () => {
                 data-aos="fade-up" data-aos-duration="800" data-aos-delay="100"
               >
                 <span className="text-3xl md:text-[34px] font-bold text-white mb-2 tracking-tight">+10</span>
-                <span className="text-[#A1A1A1] text-[13px] md:text-sm">Years Of Experience</span>
+                <span className="text-[#A1A1A1] text-[13px] md:text-sm">{t("exp")}</span>
               </div>
               
               {/* Card 3 */}
@@ -71,7 +77,7 @@ const NumberSuccess = () => {
                 data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"
               >
                 <span className="text-3xl md:text-[34px] font-bold text-white mb-2 tracking-tight">+30</span>
-                <span className="text-[#A1A1A1] text-[13px] md:text-sm">Team</span>
+                <span className="text-[#A1A1A1] text-[13px] md:text-sm">{t("team")}</span>
               </div>
             </div>
 
@@ -83,7 +89,7 @@ const NumberSuccess = () => {
                 data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"
               >
                 <span className="text-3xl md:text-[34px] font-bold text-white mb-2 tracking-tight">+120</span>
-                <span className="text-[#A1A1A1] text-[13px] md:text-sm">Solutions</span>
+                <span className="text-[#A1A1A1] text-[13px] md:text-sm">{t("solutions")}</span>
               </div>
               
               {/* Card 4 */}
@@ -92,7 +98,7 @@ const NumberSuccess = () => {
                 data-aos="fade-up" data-aos-duration="800" data-aos-delay="400"
               >
                 <span className="text-3xl md:text-[34px] font-bold text-white mb-2 tracking-tight">+200</span>
-                <span className="text-[#A1A1A1] text-[13px] md:text-sm">Clients</span>
+                <span className="text-[#A1A1A1] text-[13px] md:text-sm">{t("clients")}</span>
               </div>
             </div>
           </div>
@@ -104,3 +110,4 @@ const NumberSuccess = () => {
 };
 
 export default NumberSuccess;
+

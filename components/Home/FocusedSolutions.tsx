@@ -1,46 +1,44 @@
-import Image from "next/image";
-import Link from "next/link";
-
-const solutions = [
-  {
-    title: "Creative Solutions",
-    description:
-      "We Create Unique Ideas And Solutions That Fit Your Business Needs And Support Brand Growth.",
-    image: "/Focused Solutions/Creative Solutions - Shape.svg",
-    link: "#",
-  },
-  {
-    title: "Digital Engineering",
-    description:
-      "We Build Advanced Digital Systems That Ensure Strong Performance And High Flexibility To Support Your Business.",
-    image: "/Focused Solutions/Digital Engineering - Shape.svg",
-    link: "#",
-  },
-  {
-    title: "Customer Experience",
-    description:
-      "We Design Seamless Digital Experiences That Enhance Customer Satisfaction And Strengthen Your Relationship.",
-    image: "/Focused Solutions/CX - Shape.svg",
-    link: "#",
-  },
-  {
-    title: "Growth Solutions",
-    description:
-      "We Provide Innovative Strategies To Help You Expand Your Business And Increase Profits Smartly.",
-    image: "/Focused Solutions/Growth Solutions - Shape.svg",
-    link: "#",
-  },
-];
-
-const workspaceSolution = {
-  title: "Work Space",
-  description:
-    "We Provide Integrated Digital Workspaces That Facilitate Collaboration And Improve Team Productivity.",
-  image: "/Focused Solutions/Work Space - Shape.svg",
-  link: "#",
-};
+import Image from "@/components/shared/CustomImage";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 export default function FocusedSolutions() {
+  const t = useTranslations("FocusedSolutions");
+
+  const solutions = [
+    {
+      title: t("solutions.creative.title"),
+      description: t("solutions.creative.description"),
+      image: "/Focused Solutions/Creative Solutions - Shape.svg",
+      link: "#",
+    },
+    {
+      title: t("solutions.digital.title"),
+      description: t("solutions.digital.description"),
+      image: "/Focused Solutions/Digital Engineering - Shape.svg",
+      link: "#",
+    },
+    {
+      title: t("solutions.customer.title"),
+      description: t("solutions.customer.description"),
+      image: "/Focused Solutions/CX - Shape.svg",
+      link: "#",
+    },
+    {
+      title: t("solutions.growth.title"),
+      description: t("solutions.growth.description"),
+      image: "/Focused Solutions/Growth Solutions - Shape.svg",
+      link: "#",
+    },
+  ];
+
+  const workspaceSolution = {
+    title: t("solutions.workspace.title"),
+    description: t("solutions.workspace.description"),
+    image: "/Focused Solutions/Work Space - Shape.svg",
+    link: "#",
+  };
+
   return (
     <section className="relative w-full py-20 overflow-hidden ">
       {/* Background SVG Shape */}
@@ -62,10 +60,10 @@ export default function FocusedSolutions() {
           data-aos="fade-up"
         >
           <h2 className="text-xl sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 leading-snug sm:leading-tight">
-            Smart, Scalable, and Focused
+            {t("title").split(" ").slice(0, 4).join(" ")}
             <br className="hidden sm:block" />
             <span className="sm:hidden"> </span>
-            Solutions That Make A Difference
+            {t("title").split(" ").slice(4).join(" ")}
           </h2>
         </div>
 
@@ -92,7 +90,7 @@ export default function FocusedSolutions() {
                     href={solution.link}
                     className="inline-flex items-center text-white font-medium hover:text-[#fff422] transition-colors text-[clamp(0.75rem,0.62vw,0.875rem)] underline sm:no-underline underline-offset-4"
                   >
-                    Explore Our Solutions
+                    {t("explore")}
                     <svg
                       className="hidden sm:block w-[clamp(0.875rem,0.83vw,1rem)] h-[clamp(0.875rem,0.83vw,1rem)] ml-[clamp(0.375rem,0.41vw,0.5rem)]"
                       fill="none"
@@ -129,7 +127,7 @@ export default function FocusedSolutions() {
             data-aos="fade-up"
           >
             <div className="relative w-full h-[clamp(240px,17.91vw,344px)] bg-linear-to-br from-[#1a1829] to-[#0A0911] border border-white/10 rounded-2xl p-[clamp(24px,2.5vw,48px)] overflow-hidden group hover:border-white/20 transition-all duration-300 flex flex-col justify-center">
-              
+
               {/* CHANGED: Adjusted width from w-[85%] to w-[60%] */}
               <div className="relative z-10 w-[90%] sm:w-2/3">
                 <h3 className="font-semibold text-white mb-[clamp(0.5rem,0.62vw,0.75rem)] text-[clamp(1.25rem,1.25vw,1.5rem)]">
@@ -142,7 +140,7 @@ export default function FocusedSolutions() {
                   href={workspaceSolution.link}
                   className="inline-flex items-center text-white font-medium hover:text-[#fff422] transition-colors text-[clamp(0.75rem,0.62vw,0.875rem)] underline sm:no-underline underline-offset-4"
                 >
-                  Explore Our Solutions
+                  {t("explore")}
                   <svg
                     className="hidden sm:block w-[clamp(0.875rem,0.83vw,1rem)] h-[clamp(0.875rem,0.83vw,1rem)] ml-[clamp(0.375rem,0.41vw,0.5rem)]"
                     fill="none"
@@ -175,3 +173,4 @@ export default function FocusedSolutions() {
     </section>
   );
 }
+

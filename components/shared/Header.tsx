@@ -1,15 +1,19 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
+import Image from "@/components/shared/CustomImage";
+import { Link, usePathname } from "@/i18n/routing";
 import { useState, useEffect, useRef } from "react";
-import { usePathname } from "next/navigation";
 import NAV_LINKS from "@/data/Data-Header";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function Header() {
   const [isSideBar, setIsSideBar] = useState(false);
   const isSideBarRef = useRef(isSideBar);
   const pathname = usePathname();
+  const t = useTranslations("Header");
+  const locale = useLocale();
+  const nextLocale = locale === 'en' ? 'ar' : 'en';
+  const nextLocaleLabel = locale === 'en' ? 'AR' : 'EN';
 
   // Keep ref in sync so the scroll handler always reads the latest value
   // without re-registering the listener on every toggle
@@ -69,17 +73,21 @@ export default function Header() {
               <ul className="flex gap-10">
                 {NAV_LINKS.map((link) => (
                   <li key={link.label} className={pathname === link.href ? "active" : ""}>
-                    <Link href={link.href}>{link.label}</Link>
+                    <Link href={link.href}>{t(`nav.${link.label}` as any)}</Link>
                   </li>
                 ))}
               </ul>
             </nav>
 
-            {/* Desktop: Get in Touch */}
-            <div className="hidden lg:flex items-center gap-10">
+            {/* Desktop: Get in Touch & Lang Switcher */}
+            <div className="hidden lg:flex items-center gap-4">
+              <Link href={pathname} locale={nextLocale} className="gradient-button h-[48px] w-fit cursor-pointer px-8 transition-all duration-500 ease-in-out">
+                <span className="gradient-bg" aria-hidden="true" />
+                <span className="button-text text-sm font-medium md:text-base">{nextLocaleLabel}</span>
+              </Link>
               <Link href="/contact" className="gradient-button h-[48px] w-fit cursor-pointer px-8 transition-all duration-500 ease-in-out">
                 <span className="gradient-bg" aria-hidden="true" />
-                <span className="button-text text-sm font-medium md:text-base">Get in Touch</span>
+                <span className="button-text text-sm font-medium md:text-base">{t('getInTouch')}</span>
               </Link>
             </div>
 
@@ -127,17 +135,21 @@ export default function Header() {
                       onClick={() => setIsSideBar(false)}
                       className="w-full"
                     >
-                      {link.label}
+                      {t(`nav.${link.label}` as any)}
                     </Link>
                   </li>
                 ))}
               </ul>
             </nav>
 
-            <div className="mt-5">
+            <div className="mt-5 flex gap-4">
+              <Link href={pathname} locale={nextLocale} onClick={() => setIsSideBar(false)} className="gradient-button h-[48px] w-fit cursor-pointer px-8 transition-all duration-500 ease-in-out">
+                <span className="gradient-bg" aria-hidden="true" />
+                <span className="button-text text-sm font-medium md:text-base">{nextLocaleLabel}</span>
+              </Link>
               <Link href="/contact" onClick={() => setIsSideBar(false)} className="gradient-button h-[48px] w-fit cursor-pointer px-8 transition-all duration-500 ease-in-out">
                 <span className="gradient-bg" aria-hidden="true" />
-                <span className="button-text text-sm font-medium md:text-base">Get in Touch</span>
+                <span className="button-text text-sm font-medium md:text-base">{t('getInTouch')}</span>
               </Link>
             </div>
           </div>
@@ -146,3 +158,4 @@ export default function Header() {
     </header>
   );
 }
+

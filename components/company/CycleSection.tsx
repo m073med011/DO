@@ -1,23 +1,8 @@
 "use client";
 
 import React, { useState } from 'react';
-import Image from 'next/image';
-
-const teamItems = [
-  "All-in-one tools for productivity",
-  "Continuous growth & support",
-  "Space for innovation & bold ideas",
-  "Clear goals & ownership",
-  "Culture built on trust and impact"
-];
-
-const clientItems = [
-  "Real results, delivered fast",
-  "Transparent communication",
-  "Insightful reports & analytics",
-  "Consistent brand experience",
-  "One partner for all digital needs"
-];
+import Image from '@/components/shared/CustomImage';
+import { useTranslations } from 'next-intl';
 
 const AccordionItem = ({ title, items, isOpen, onToggle }: { title: string, items: string[], isOpen: boolean, onToggle: () => void }) => {
   return (
@@ -47,13 +32,18 @@ const AccordionItem = ({ title, items, isOpen, onToggle }: { title: string, item
 
 export default function CycleSection() {
   const [openAccordion, setOpenAccordion] = useState<'team' | 'clients' | null>('clients');
+  const t = useTranslations("Company.cycle");
+
+  const teamItems = t.raw("teamItems") as string[];
+  const clientItems = t.raw("clientItems") as string[];
 
   return (
     <section className="my-[clamp(2.5rem,15vw,18rem)] relative bg-transparent overflow-hidden">
       <div className="container mx-auto max-w-[1384px] px-5 relative z-10 text-center mb-12 md:mb-16">
         <h2 className="text-[20px] md:text-[32px] font-semibold text-white leading-tight md:px-4" data-aos="fade-up">
-          We Craft Exceptional Experiences By Working <br className="hidden md:block"/>
-          With The Best Team — For The Best Clients.
+          {t.rich("title", {
+            br: () => <br className="hidden md:block"/>
+          })}
         </h2>
       </div>
 
@@ -79,17 +69,17 @@ export default function CycleSection() {
 
             {/* Top Text */}
             <div className="absolute inset-0 flex justify-center">
-              <span className="text-white text-[20px] font-medium mt-[22px] tracking-wide">Build</span>
+              <span className="text-white text-[20px] font-medium mt-[22px] tracking-wide">{t("build")}</span>
             </div>
 
             {/* Bottom Right Text */}
             <div className="absolute inset-0 flex items-end justify-center rotate-[-50deg]">
-              <span className="text-white text-[20px] font-medium mb-[22px] tracking-wide">Manage</span>
+              <span className="text-white text-[20px] font-medium mb-[22px] tracking-wide">{t("manage")}</span>
             </div>
 
             {/* Bottom Left Text */}
             <div className="absolute inset-0 flex items-end justify-center rotate-60">
-              <span className="text-white text-[20px] font-medium mb-[22px] tracking-wide">Launch</span>
+              <span className="text-white text-[20px] font-medium mb-[22px] tracking-wide">{t("launch")}</span>
             </div>
           </div>
         </div>
@@ -97,7 +87,7 @@ export default function CycleSection() {
         <div className="container mx-auto max-w-[1384px] px-5 flex justify-between relative z-20 h-full w-full py-10">
           {/* Left List - Team */}
           <div className="w-[40%] flex flex-col justify-center" data-aos="fade-right">
-             <h3 className="text-white text-[18px] font-bold text-center mb-12 pl-10">For Team</h3>
+             <h3 className="text-white text-[18px] font-bold text-center mb-12 pl-10">{t("forTeam")}</h3>
              <ul className="space-y-[52px] pl-[15%]">
                 {teamItems.map((item, index) => (
                   <li key={index} className="flex items-center text-[#A1A1A1] text-[13px] relative whitespace-nowrap">
@@ -110,7 +100,7 @@ export default function CycleSection() {
 
           {/* Right List - Clients */}
           <div className="w-[40%] flex flex-col justify-center" data-aos="fade-left">
-             <h3 className="text-white text-[18px] font-bold text-center mb-12 pl-10">For Clients</h3>
+             <h3 className="text-white text-[18px] font-bold text-center mb-12 pl-10">{t("forClients")}</h3>
              <ul className="space-y-[52px] pl-[45%]">
                 {clientItems.map((item, index) => (
                   <li key={index} className="flex items-center text-[#A1A1A1] text-[13px] relative whitespace-nowrap">
@@ -137,13 +127,13 @@ export default function CycleSection() {
 
         <div className="max-w-[400px] mx-auto" data-aos="fade-up">
           <AccordionItem 
-            title="For Team" 
+            title={t("forTeam")} 
             items={teamItems} 
             isOpen={openAccordion === 'team'}
             onToggle={() => setOpenAccordion(openAccordion === 'team' ? null : 'team')}
           />
           <AccordionItem 
-            title="For Clients" 
+            title={t("forClients")} 
             items={clientItems} 
             isOpen={openAccordion === 'clients'}
             onToggle={() => setOpenAccordion(openAccordion === 'clients' ? null : 'clients')}
@@ -153,3 +143,4 @@ export default function CycleSection() {
     </section>
   );
 }
+

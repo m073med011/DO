@@ -1,49 +1,52 @@
 import React from "react";
-import Image from "next/image";
-
-const features = [
-  {
-    title: "True Quality",
-    description: "We focus on precise outcomes and meaningful work.",
-    icon: (
-      <Image src="/career/customer-success.svg" alt="True Quality" width={24} height={24} />
-    ),
-  },
-  {
-    title: "Clear Communication",
-    description: "We work transparently and align on expectations.",
-    icon: (
-      <Image src="/career/interaction.svg" alt="Clear Communication" width={24} height={24} />
-    ),
-  },
-  {
-    title: "Ongoing Growth",
-    description: "We offer real opportunities for skill development.",
-    icon: (
-      <Image src="/career/success (1) 1.svg" alt="Ongoing Growth" width={24} height={24} />
-    ),
-  },
-  {
-    title: "Real Results",
-    description: "Success is measured by tangible, lasting impact.",
-    icon: (
-      <Image src="/career/success.svg" alt="Real Results" width={24} height={24} />
-    ),
-  },
-  {
-    title: "Meaningful Impact",
-    description: "Every voice matters — And helps shape what we build.",
-    icon: (
-      <Image src="/career/participation.svg" alt="Meaningful Impact" width={24} height={24} />
-    ),
-  },
-];
+import Image from "@/components/shared/CustomImage";
+import { useTranslations } from "next-intl";
 
 const WhatMakesUsDifferent = () => {
+  const t = useTranslations("Career.different");
+
+  const features = [
+    {
+      title: t("features.quality.title"),
+      description: t("features.quality.description"),
+      icon: (
+        <Image src="/career/customer-success.svg" alt="True Quality" width={24} height={24} />
+      ),
+    },
+    {
+      title: t("features.communication.title"),
+      description: t("features.communication.description"),
+      icon: (
+        <Image src="/career/interaction.svg" alt="Clear Communication" width={24} height={24} />
+      ),
+    },
+    {
+      title: t("features.growth.title"),
+      description: t("features.growth.description"),
+      icon: (
+        <Image src="/career/success (1) 1.svg" alt="Ongoing Growth" width={24} height={24} />
+      ),
+    },
+    {
+      title: t("features.results.title"),
+      description: t("features.results.description"),
+      icon: (
+        <Image src="/career/success.svg" alt="Real Results" width={24} height={24} />
+      ),
+    },
+    {
+      title: t("features.impact.title"),
+      description: t("features.impact.description"),
+      icon: (
+        <Image src="/career/participation.svg" alt="Meaningful Impact" width={24} height={24} />
+      ),
+    },
+  ];
+
   return (
     <section className="mt-[208px] px-4 sm:px-6 lg:px-8  mx-auto" data-aos="fade-up" data-aos-duration="1000">
       <h2 className="text-2xl md:text-3xl font-bold text-center text-white mb-12" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-        What Makes Us Different?
+        {t("title")}
       </h2>
 
       <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
@@ -94,3 +97,4 @@ const WhatMakesUsDifferent = () => {
 };
 
 export default WhatMakesUsDifferent;
+

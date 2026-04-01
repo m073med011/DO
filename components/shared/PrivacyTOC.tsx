@@ -2,20 +2,13 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
-const tocItems = [
-  { id: 1, label: "Information We Collect", anchor: "info-collect" },
-  { id: 2, label: "How We Use the Information", anchor: "info-use" },
-  { id: 3, label: "Information Protection", anchor: "info-protection" },
-  { id: 4, label: "Information Sharing", anchor: "info-sharing" },
-  { id: 5, label: "Cookies", anchor: "cookies" },
-  { id: 6, label: "Your Rights", anchor: "your-rights" },
-  { id: 7, label: "Changes to This Policy", anchor: "policy-changes" },
-  { id: 8, label: "Contact Us", anchor: "contact-us" },
-];
+import { useTranslations } from "next-intl";
 
 export default function PrivacyTOC() {
+  const t = useTranslations("Privacy");
   const [activeId, setActiveId] = useState<string>("");
+
+  const tocItems = t.raw("sections") as { id: number; title: string; anchor: string }[];
 
   useEffect(() => {
     const sectionIds = tocItems.map((item) => item.anchor);
@@ -43,7 +36,7 @@ export default function PrivacyTOC() {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [tocItems]);
 
   return (
     <aside
@@ -54,10 +47,10 @@ export default function PrivacyTOC() {
     >
       <div className="sticky top-28">
         <h3 className="mb-5 text-base font-semibold text-white">
-          Table Of Content
+          {t("toc")}
         </h3>
         <nav>
-          <ol className="space-y-3 border-l border-white/10 pl-4">
+          <ol className="space-y-3 border-l border-white/10 pl-4 rtl:border-l-0 rtl:border-r rtl:pl-0 rtl:pr-4">
             {tocItems.map((item) => {
               const isActive = activeId === item.anchor;
               return (
@@ -79,7 +72,7 @@ export default function PrivacyTOC() {
                     >
                       {item.id}.
                     </span>
-                    {item.label}
+                    {item.title}
                   </Link>
                 </li>
               );

@@ -1,57 +1,60 @@
-import Image from "next/image";
+import Image from "@/components/shared/CustomImage";
 import StatisticsCard from "./StatisticsCard";
-
-const cards = [
-  {
-    width: "198",
-    height: "224",
-    color: "#FFF422",
-    textColor: "#FFFDD3",
-    border: "A39500",
-    title: "Smart Solutions",
-    number: "+120",
-  },
-  {
-    width: "228",
-    height: "240",
-    color: "#AF99FF",
-    textColor: "#E8E0FF",
-    border: "#4C33A4",
-    title: "Success Partners",
-    number: "+200",
-  },
-  {
-    width: "306",
-    height: "280",
-    color: "#FFF422",
-    textColor: "#FFFDD3",
-    border: "A39500",
-    title: "Years of Experience",
-    number: "+10",
-  },
-  {
-    width: "228",
-    height: "240",
-    color: "#AF99FF",
-    textColor: "#E8E0FF",
-    border: "#4C33A4",
-    title: "Successful Projects",
-    number: "+144",
-  },
-  {
-    width: "198",
-    height: "224",
-    color: "#FFF422",
-    textColor: "#FFFDD3",
-    border: "A39500",
-    title: "Skilled Experts",
-    number: "+30",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const aosDelays = [500, 300, 0, 300, 500];
 
 export default function StatisticsSection() {
+  const t = useTranslations("Statistics");
+
+  const cards = [
+    {
+      width: "198",
+      height: "224",
+      color: "#FFF422",
+      textColor: "#FFFDD3",
+      border: "A39500",
+      title: t("smartSolutions"),
+      number: "+120",
+    },
+    {
+      width: "228",
+      height: "240",
+      color: "#AF99FF",
+      textColor: "#E8E0FF",
+      border: "#4C33A4",
+      title: t("successPartners"),
+      number: "+200",
+    },
+    {
+      width: "306",
+      height: "280",
+      color: "#FFF422",
+      textColor: "#FFFDD3",
+      border: "A39500",
+      title: t("expYears"),
+      number: "+10",
+    },
+    {
+      width: "228",
+      height: "240",
+      color: "#AF99FF",
+      textColor: "#E8E0FF",
+      border: "#4C33A4",
+      title: t("successfulProjects"),
+      number: "+144",
+    },
+    {
+      width: "198",
+      height: "224",
+      color: "#FFF422",
+      textColor: "#FFFDD3",
+      border: "A39500",
+      title: t("skilledExperts"),
+      number: "+30",
+    },
+  ];
+
   return (
     <div className="Statistics relative z-20 overflow-hidden lg:mt-20">
       <div className="container mx-auto">
@@ -94,7 +97,7 @@ export default function StatisticsSection() {
               +10
             </h2>
             <p className="text-center text-xs font-normal text-[#E2E2E2] sm:text-base">
-              Years of Experience
+              {t("expYears")}
             </p>
           </div>
 
@@ -103,7 +106,7 @@ export default function StatisticsSection() {
               +120
             </h2>
             <p className="text-center text-xs font-normal text-[#E2E2E2] sm:text-base">
-              Smart Solutions
+              {t("smartSolutions")}
             </p>
           </div>
 
@@ -112,7 +115,7 @@ export default function StatisticsSection() {
               +200
             </h2>
             <p className="text-center text-xs font-normal text-[#E2E2E2] sm:text-base">
-              Success Partners
+              {t("successPartners")}
             </p>
           </div>
 
@@ -121,7 +124,7 @@ export default function StatisticsSection() {
               +30
             </h2>
             <p className="text-center text-xs font-normal text-[#E2E2E2] sm:text-base">
-              Skilled Experts
+              {t("skilledExperts")}
             </p>
           </div>
         </div>

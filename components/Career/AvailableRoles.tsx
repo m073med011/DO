@@ -1,61 +1,58 @@
 import React from "react";
-
-const roles = [
-  {
-    title: "UI/UX Designer",
-    description:
-      "Looking for a mid-level designer ready to take on the world of web and app design. The ideal...",
-    location: "Remote",
-    type: "Full Time",
-    level: "Entry Level",
-  },
-  {
-    title: "UI/UX Designer",
-    description:
-      "Looking for a senior UI/UX designer ready to take on the world of web and app design...",
-    location: "Remote",
-    type: "Full Time",
-    level: "Entry Level",
-  },
-  {
-    title: "UI/UX Designer",
-    description:
-      "Looking for a mid-level designer ready to take on the world of web and app design. The ideal...",
-    location: "Remote",
-    type: "Full Time",
-    level: "Entry Level",
-  },
-  {
-    title: "UI/UX Designer",
-    description:
-      "Looking for a senior UI/UX designer ready to take on the world of web and app design...",
-    location: "Remote",
-    type: "Full Time",
-    level: "Entry Level",
-  },
-  {
-    title: "UI/UX Designer",
-    description:
-      "Looking for a mid-level designer ready to take on the world of web and app design. The ideal...",
-    location: "Remote",
-    type: "Full Time",
-    level: "Entry Level",
-  },
-  {
-    title: "UI/UX Designer",
-    description:
-      "Looking for a senior UI/UX designer ready to take on the world of web and app design...",
-    location: "Remote",
-    type: "Full Time",
-    level: "Entry Level",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const AvailableRoles = () => {
+  const t = useTranslations("Career.roles");
+
+  const roles = [
+    {
+      title: t("items.designer_mid.title"),
+      description: t("items.designer_mid.description"),
+      location: t("items.designer_mid.location"),
+      type: t("items.designer_mid.type"),
+      level: t("items.designer_mid.level"),
+    },
+    {
+      title: t("items.designer_senior.title"),
+      description: t("items.designer_senior.description"),
+      location: t("items.designer_senior.location"),
+      type: t("items.designer_senior.type"),
+      level: t("items.designer_senior.level"),
+    },
+    {
+      title: t("items.designer_mid.title"),
+      description: t("items.designer_mid.description"),
+      location: t("items.designer_mid.location"),
+      type: t("items.designer_mid.type"),
+      level: t("items.designer_mid.level"),
+    },
+    {
+      title: t("items.designer_senior.title"),
+      description: t("items.designer_senior.description"),
+      location: t("items.designer_senior.location"),
+      type: t("items.designer_senior.type"),
+      level: t("items.designer_senior.level"),
+    },
+    {
+      title: t("items.designer_mid.title"),
+      description: t("items.designer_mid.description"),
+      location: t("items.designer_mid.location"),
+      type: t("items.designer_mid.type"),
+      level: t("items.designer_mid.level"),
+    },
+    {
+      title: t("items.designer_senior.title"),
+      description: t("items.designer_senior.description"),
+      location: t("items.designer_senior.location"),
+      type: t("items.designer_senior.type"),
+      level: t("items.designer_senior.level"),
+    },
+  ];
+
   return (
     <section className="mt-[208px] px-4 sm:px-6 lg:px-8  mx-auto" data-aos="fade-up" data-aos-duration="1000">
       <h2 className="text-2xl md:text-3xl font-bold text-center text-white mb-12" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-        Available Roles
+        {t("title")}
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">

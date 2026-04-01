@@ -1,20 +1,25 @@
-import Image from 'next/image';
+import Image from '@/components/shared/CustomImage';
 import React from 'react';
-
-const journeyData = [
-  { year: "2014", text: "We began with a bold vision to digitize real business dreams" },
-  { year: "2016", text: "We built our core team and delivered our first success stories" },
-  { year: "2018", text: "We expanded our services and entered more competitive digital markets" },
-  { year: "2020", text: "We reshaped how we work, think, and create" },
-  { year: "2023", text: "We strengthened our partnerships and scaled our impact across industries" },
-  { year: "2025", text: "We rebranded to reflect our vision, growth, and future goals" },
-];
+import { useTranslations } from 'next-intl';
 
 export default function JourneySection() {
+  const t = useTranslations("Company.journey");
+
+  const journeyData = [
+    { year: "2014", text: t("items.2014") },
+    { year: "2016", text: t("items.2016") },
+    { year: "2018", text: t("items.2018") },
+    { year: "2020", text: t("items.2020") },
+    { year: "2023", text: t("items.2023") },
+    { year: "2025", text: t("items.2025") },
+  ];
+
   return (
     <section className="text-white my-[clamp(2.5rem,15vw,18rem)] w-full flex flex-col items-center">
       <h2 className="text-2xl md:text-3xl lg:text-[40px] font-semibold mb-16 text-center max-w-4xl leading-snug lg:leading-tight">
-        DO... A Journey That Started With a Dream<br className="hidden md:block"/> and Keeps Powering Forward
+        {t.rich("title", {
+          br: () => <br className="hidden md:block"/>
+        })}
       </h2>
 
       {/* Desktop View */}
@@ -57,3 +62,4 @@ export default function JourneySection() {
     </section>
   );
 }
+

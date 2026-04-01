@@ -1,9 +1,10 @@
 "use client";
 import React, { useRef } from "react";
-import Image from "next/image";
+import Image from "@/components/shared/CustomImage";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslations } from "next-intl";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -11,87 +12,88 @@ if (typeof window !== "undefined") {
 
 const ICON_BASE = "/solutions/Creative%20solutions/";
 
-const categoriesData = [
-  {
-    name: "Creative Solutions",
-    tag: "Creative Solutions",
-    title: "Creative Solutions Designed To Turn Your Ideas Into Reality.",
-    cards: [
-      { title: "Visual Identity", icon: "Group.svg" },
-      { title: "Brand Guidelines", icon: "Group (1).svg" },
-      { title: "Verbal Identity", icon: "Group (2).svg" },
-      { title: "Naming & Taglines", icon: "Group (3).svg" },
-      { title: "Writing", icon: "Group (4).svg" },
-      { title: "Voice Over", icon: "Group (5).svg" },
-      { title: "Animation Design", icon: "Icons.svg" },
-      { title: "Media Production", icon: "Line.svg" },
-    ],
-  },
-  {
-    name: "Digital Engineering",
-    tag: "Digital Engineering",
-    title: "Digital Engineering Built to Power Your Business Forward.",
-    cards: [
-      { title: "Web Development", icon: "Group.svg" },
-      { title: "Mobile Apps", icon: "Group (1).svg" },
-      { title: "Cloud Solutions", icon: "Group (2).svg" },
-      { title: "API Integration", icon: "Group (3).svg" },
-      { title: "DevOps", icon: "Group (4).svg" },
-      { title: "QA & Testing", icon: "Group (5).svg" },
-      { title: "Microservices", icon: "Icons.svg" },
-      { title: "Data Engineering", icon: "Line.svg" },
-    ],
-  },
-  {
-    name: "Customer Experience",
-    tag: "Customer Experience",
-    title: "Exceptional Experiences That Keep Customers Coming Back.",
-    cards: [
-      { title: "UX Research", icon: "Group.svg" },
-      { title: "UI Design", icon: "Group (1).svg" },
-      { title: "Usability Testing", icon: "Group (2).svg" },
-      { title: "Journey Mapping", icon: "Group (3).svg" },
-      { title: "Prototyping", icon: "Group (4).svg" },
-      { title: "A/B Testing", icon: "Group (5).svg" },
-      { title: "CX Strategy", icon: "Icons.svg" },
-      { title: "Support Systems", icon: "Line.svg" },
-    ],
-  },
-  {
-    name: "Growth Solutions",
-    tag: "Growth Solutions",
-    title: "Data-Driven Growth Strategies That Deliver Results.",
-    cards: [
-      { title: "SEO & Content", icon: "Group.svg" },
-      { title: "Paid Media", icon: "Group (1).svg" },
-      { title: "Analytics", icon: "Group (2).svg" },
-      { title: "Conversion Rate", icon: "Group (3).svg" },
-      { title: "Email Marketing", icon: "Group (4).svg" },
-      { title: "Social Media", icon: "Group (5).svg" },
-      { title: "Influencer", icon: "Icons.svg" },
-      { title: "Market Research", icon: "Line.svg" },
-    ],
-  },
-  {
-    name: "Work Space",
-    tag: "Work Space",
-    title: "Collaborative Workspaces Designed for High Performance.",
-    cards: [
-      { title: "Team Collaboration", icon: "Group.svg" },
-      { title: "Project Management", icon: "Group (1).svg" },
-      { title: "Remote Workflows", icon: "Group (2).svg" },
-      { title: "Culture Building", icon: "Group (3).svg" },
-      { title: "HR Tools", icon: "Group (4).svg" },
-      { title: "Knowledge Base", icon: "Group (5).svg" },
-      { title: "Onboarding", icon: "Icons.svg" },
-      { title: "Performance Mgmt", icon: "Line.svg" },
-    ],
-  },
-];
-
-const TOTAL_STEPS = categoriesData.length;
-
 function DesktopView() {
+  const t = useTranslations("Solutions.creative");
+  
+  const categoriesData = [
+    {
+      name: t("categories.creative.name"),
+      tag: t("categories.creative.tag"),
+      title: t("categories.creative.title"),
+      cards: [
+        { title: t("categories.creative.cards.visual"), icon: "Group.svg" },
+        { title: t("categories.creative.cards.guidelines"), icon: "Group (1).svg" },
+        { title: t("categories.creative.cards.verbal"), icon: "Group (2).svg" },
+        { title: t("categories.creative.cards.naming"), icon: "Group (3).svg" },
+        { title: t("categories.creative.cards.writing"), icon: "Group (4).svg" },
+        { title: t("categories.creative.cards.voice"), icon: "Group (5).svg" },
+        { title: t("categories.creative.cards.animation"), icon: "Icons.svg" },
+        { title: t("categories.creative.cards.media"), icon: "Line.svg" },
+      ],
+    },
+    {
+      name: t("categories.digital.name"),
+      tag: t("categories.digital.tag"),
+      title: t("categories.digital.title"),
+      cards: [
+        { title: t("categories.digital.cards.web"), icon: "Group.svg" },
+        { title: t("categories.digital.cards.mobile"), icon: "Group (1).svg" },
+        { title: t("categories.digital.cards.cloud"), icon: "Group (2).svg" },
+        { title: t("categories.digital.cards.api"), icon: "Group (3).svg" },
+        { title: t("categories.digital.cards.devops"), icon: "Group (4).svg" },
+        { title: t("categories.digital.cards.qa"), icon: "Group (5).svg" },
+        { title: t("categories.digital.cards.microservices"), icon: "Icons.svg" },
+        { title: t("categories.digital.cards.data"), icon: "Line.svg" },
+      ],
+    },
+    {
+      name: t("categories.customer.name"),
+      tag: t("categories.customer.tag"),
+      title: t("categories.customer.title"),
+      cards: [
+        { title: t("categories.customer.cards.research"), icon: "Group.svg" },
+        { title: t("categories.customer.cards.ui"), icon: "Group (1).svg" },
+        { title: t("categories.customer.cards.usability"), icon: "Group (2).svg" },
+        { title: t("categories.customer.cards.journey"), icon: "Group (3).svg" },
+        { title: t("categories.customer.cards.prototyping"), icon: "Group (4).svg" },
+        { title: t("categories.customer.cards.ab"), icon: "Group (5).svg" },
+        { title: t("categories.customer.cards.strategy"), icon: "Icons.svg" },
+        { title: t("categories.customer.cards.support"), icon: "Line.svg" },
+      ],
+    },
+    {
+      name: t("categories.growth.name"),
+      tag: t("categories.growth.tag"),
+      title: t("categories.growth.title"),
+      cards: [
+        { title: t("categories.growth.cards.seo"), icon: "Group.svg" },
+        { title: t("categories.growth.cards.paid"), icon: "Group (1).svg" },
+        { title: t("categories.growth.cards.analytics"), icon: "Group (2).svg" },
+        { title: t("categories.growth.cards.conversion"), icon: "Group (3).svg" },
+        { title: t("categories.growth.cards.email"), icon: "Group (4).svg" },
+        { title: t("categories.growth.cards.social"), icon: "Group (5).svg" },
+        { title: t("categories.growth.cards.influencer"), icon: "Icons.svg" },
+        { title: t("categories.growth.cards.market"), icon: "Line.svg" },
+      ],
+    },
+    {
+      name: t("categories.workspace.name"),
+      tag: t("categories.workspace.tag"),
+      title: t("categories.workspace.title"),
+      cards: [
+        { title: t("categories.workspace.cards.collaboration"), icon: "Group.svg" },
+        { title: t("categories.workspace.cards.management"), icon: "Group (1).svg" },
+        { title: t("categories.workspace.cards.remote"), icon: "Group (2).svg" },
+        { title: t("categories.workspace.cards.culture"), icon: "Group (3).svg" },
+        { title: t("categories.workspace.cards.hr"), icon: "Group (4).svg" },
+        { title: t("categories.workspace.cards.knowledge"), icon: "Group (5).svg" },
+        { title: t("categories.workspace.cards.onboarding"), icon: "Icons.svg" },
+        { title: t("categories.workspace.cards.performance"), icon: "Line.svg" },
+      ],
+    },
+  ];
+
+  const TOTAL_STEPS = categoriesData.length;
   const containerRef = useRef<HTMLDivElement>(null);
   const trackFillRef = useRef<HTMLDivElement>(null);
   const trackDotRef = useRef<HTMLDivElement>(null);
@@ -208,13 +210,13 @@ function DesktopView() {
         {/* Sidebar */}
         <div className="w-[220px] shrink-0 z-20 relative">
           <div
-            className="relative ml-[7px]"
+            className="relative ms-[7px]"
             style={{ height: `${(TOTAL_STEPS - 1) * 64}px` }}
           >
-            <div className="absolute top-0 -left-[1.5px] h-full w-[2px] bg-white/10" />
+            <div className="absolute top-0 -start-[1.5px] h-full w-[2px] bg-white/10" />
             <div
               ref={trackFillRef}
-              className="absolute top-0 -left-[1.5px] w-[2px] bg-primary z-10"
+              className="absolute top-0 -start-[1.5px] w-[2px] bg-primary z-10"
               style={{ height: "0%" }}
             />
             <div
@@ -241,7 +243,7 @@ function DesktopView() {
               <div
                 key={i}
                 onClick={() => scrollToStep(i)}
-                className="flex items-center absolute cursor-pointer group pl-10 w-full"
+                className="flex items-center absolute cursor-pointer group ps-10 w-full"
                 style={{
                   top: `${(i / (TOTAL_STEPS - 1)) * 100}%`,
                   transform: "translateY(-50%)",
@@ -300,7 +302,7 @@ function DesktopView() {
                       key={idx}
                       className="anim-target about-card flex items-center justify-start rounded-xl px-5 md:px-8 py-4 md:py-5 group cursor-pointer transform translate-z-0"
                     >
-                      <div className="w-[34px] h-[34px] md:w-[38px] md:h-[38px] relative mr-4 shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-[34px] h-[34px] md:w-[38px] md:h-[38px] relative me-4 shrink-0 group-hover:scale-110 transition-transform duration-300">
                         <Image
                           src={`${ICON_BASE}${encodeURIComponent(card.icon)}`}
                           alt={card.title}
@@ -324,6 +326,86 @@ function DesktopView() {
 }
 
 function MobileView() {
+  const t = useTranslations("Solutions.creative");
+  
+  const categoriesData = [
+    {
+      name: t("categories.creative.name"),
+      tag: t("categories.creative.tag"),
+      title: t("categories.creative.title"),
+      cards: [
+        { title: t("categories.creative.cards.visual"), icon: "Group.svg" },
+        { title: t("categories.creative.cards.guidelines"), icon: "Group (1).svg" },
+        { title: t("categories.creative.cards.verbal"), icon: "Group (2).svg" },
+        { title: t("categories.creative.cards.naming"), icon: "Group (3).svg" },
+        { title: t("categories.creative.cards.writing"), icon: "Group (4).svg" },
+        { title: t("categories.creative.cards.voice"), icon: "Group (5).svg" },
+        { title: t("categories.creative.cards.animation"), icon: "Icons.svg" },
+        { title: t("categories.creative.cards.media"), icon: "Line.svg" },
+      ],
+    },
+    {
+      name: t("categories.digital.name"),
+      tag: t("categories.digital.tag"),
+      title: t("categories.digital.title"),
+      cards: [
+        { title: t("categories.digital.cards.web"), icon: "Group.svg" },
+        { title: t("categories.digital.cards.mobile"), icon: "Group (1).svg" },
+        { title: t("categories.digital.cards.cloud"), icon: "Group (2).svg" },
+        { title: t("categories.digital.cards.api"), icon: "Group (3).svg" },
+        { title: t("categories.digital.cards.devops"), icon: "Group (4).svg" },
+        { title: t("categories.digital.cards.qa"), icon: "Group (5).svg" },
+        { title: t("categories.digital.cards.microservices"), icon: "Icons.svg" },
+        { title: t("categories.digital.cards.data"), icon: "Line.svg" },
+      ],
+    },
+    {
+      name: t("categories.customer.name"),
+      tag: t("categories.customer.tag"),
+      title: t("categories.customer.title"),
+      cards: [
+        { title: t("categories.customer.cards.research"), icon: "Group.svg" },
+        { title: t("categories.customer.cards.ui"), icon: "Group (1).svg" },
+        { title: t("categories.customer.cards.usability"), icon: "Group (2).svg" },
+        { title: t("categories.customer.cards.journey"), icon: "Group (3).svg" },
+        { title: t("categories.customer.cards.prototyping"), icon: "Group (4).svg" },
+        { title: t("categories.customer.cards.ab"), icon: "Group (5).svg" },
+        { title: t("categories.customer.cards.strategy"), icon: "Icons.svg" },
+        { title: t("categories.customer.cards.support"), icon: "Line.svg" },
+      ],
+    },
+    {
+      name: t("categories.growth.name"),
+      tag: t("categories.growth.tag"),
+      title: t("categories.growth.title"),
+      cards: [
+        { title: t("categories.growth.cards.seo"), icon: "Group.svg" },
+        { title: t("categories.growth.cards.paid"), icon: "Group (1).svg" },
+        { title: t("categories.growth.cards.analytics"), icon: "Group (2).svg" },
+        { title: t("categories.growth.cards.conversion"), icon: "Group (3).svg" },
+        { title: t("categories.growth.cards.email"), icon: "Group (4).svg" },
+        { title: t("categories.growth.cards.social"), icon: "Group (5).svg" },
+        { title: t("categories.growth.cards.influencer"), icon: "Icons.svg" },
+        { title: t("categories.growth.cards.market"), icon: "Line.svg" },
+      ],
+    },
+    {
+      name: t("categories.workspace.name"),
+      tag: t("categories.workspace.tag"),
+      title: t("categories.workspace.title"),
+      cards: [
+        { title: t("categories.workspace.cards.collaboration"), icon: "Group.svg" },
+        { title: t("categories.workspace.cards.management"), icon: "Group (1).svg" },
+        { title: t("categories.workspace.cards.remote"), icon: "Group (2).svg" },
+        { title: t("categories.workspace.cards.culture"), icon: "Group (3).svg" },
+        { title: t("categories.workspace.cards.hr"), icon: "Group (4).svg" },
+        { title: t("categories.workspace.cards.knowledge"), icon: "Group (5).svg" },
+        { title: t("categories.workspace.cards.onboarding"), icon: "Icons.svg" },
+        { title: t("categories.workspace.cards.performance"), icon: "Line.svg" },
+      ],
+    },
+  ];
+
   const containerRef = useRef<HTMLDivElement>(null);
   const trackFillRef = useRef<HTMLDivElement>(null);
   const trackDotRef = useRef<HTMLDivElement>(null);
@@ -380,8 +462,8 @@ function MobileView() {
         <div
           className="shrink-0 flex flex-col z-20 relative pt-2"
         >
-          <div className="sticky top-32 flex flex-col ml-[7px]" style={{ height: "60vh" }}>
-            <div className="absolute top-0 bottom-0 -left-[1.5px] w-[2px] bg-white/10" />
+          <div className="sticky top-32 flex flex-col ms-[7px]" style={{ height: "60vh" }}>
+            <div className="absolute top-0 bottom-0 -start-[1.5px] w-[2px] bg-white/10" />
             <div
               ref={trackFillRef}
               className="absolute top-0 -left-[1.5px] w-[2px] bg-primary z-10"
@@ -424,7 +506,7 @@ function MobileView() {
                     key={idx}
                     className="anim-target-mobile about-card flex items-center rounded-xl px-4 py-4 group cursor-pointer"
                   >
-                    <div className="w-[30px] h-[30px] relative mr-3 shrink-0">
+                    <div className="w-[30px] h-[30px] relative me-3 shrink-0">
                       <Image
                         src={`${ICON_BASE}${encodeURIComponent(card.icon)}`}
                         alt={card.title}
@@ -458,3 +540,4 @@ export default function CreativeSolutions() {
     </section>
   );
 }
+

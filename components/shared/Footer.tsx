@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Image from "@/components/shared/CustomImage";
+import { Link, usePathname } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 const InstagramIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -62,6 +62,7 @@ const SocialMedia = [
 export default function Footer() {
   const pathname = usePathname();
   const currentYear = new Date().getFullYear();
+  const t = useTranslations("Footer");
 
   return (
     <footer dir="ltr" className="relative mx-auto mt-[120px] 2xl:mt-[6.25vw] max-w-[1384px] w-full 2xl:max-w-[72.08vw] px-11 py-8 text-white sm:px-7 md:py-14">
@@ -80,10 +81,10 @@ export default function Footer() {
             </Link>
             <div className="content">
               <p className="text-base font-normal !text-white 2xl:text-[0.83vw]">
-                Don&apos;t Just Dream. DO
+                {t('slogan1')}
               </p>
               <p className="mb-8 text-base font-normal !text-white 2xl:mb-[1.66vw] 2xl:text-[0.83vw]">
-                Creativity That Makes a Digital Impact
+                {t('slogan2')}
               </p>
               <div className="flex flex-wrap gap-3 md:gap-4 2xl:gap-[0.83vw]">
                 {SocialMedia.map((social) => (
@@ -109,15 +110,15 @@ export default function Footer() {
           <div className="col-span-2">
             <div className="w-full md:max-w-[304px] 2xl:max-w-[15.83vw]">
               <h2 className="mb-4 text-lg font-normal capitalize text-white 2xl:mb-[0.83vw] 2xl:text-[0.93vw]">
-                Address
+                {t('addressTitle')}
               </h2>
               <p className="cursor-pointer text-[#a1a1aa] transition-all duration-200 ease-in-out hover:text-[#fff422] 2xl:text-[0.83vw]">
-                Jeddah - Al Hamra Dist. - Falasteen St. - Building No. 3047
+                {t('addressText')}
               </p>
             </div>
             <div className="mt-6 md:mt-10 2xl:mt-[2.08vw]">
               <h2 className="mb-4 text-lg font-normal capitalize text-white 2xl:mb-[0.83vw] 2xl:text-[0.93vw]">
-                Get in Touch
+                {t('getInTouch')}
               </h2>
               <p className="mb-2 text-[#a1a1aa] transition-all 2xl:mb-[0.41vw] 2xl:text-[0.83vw]">
                 <span className="mx-1">
@@ -143,7 +144,7 @@ export default function Footer() {
 
           <div className="col-span-1">
             <h2 className="mb-4 text-lg font-normal capitalize text-white 2xl:mb-[0.83vw] 2xl:text-[0.93vw]">
-              Quick Links
+              {t('quickLinks')}
             </h2>
             <nav>
               <ul className="flex flex-col gap-2 text-lg font-medium 2xl:gap-[0.41vw] 2xl:text-[0.93vw]">
@@ -160,7 +161,7 @@ export default function Footer() {
                       pathname === item.path ? "text-[#fff422]" : ""
                     } cursor-pointer text-[#a1a1aa] transition-all duration-200 ease-in-out hover:text-[#fff422]`}
                   >
-                    <Link href={item.path}>{item.label}</Link>
+                    <Link href={item.path}>{t(`nav.${item.label}` as any)}</Link>
                   </li>
                 ))}
               </ul>
@@ -169,7 +170,7 @@ export default function Footer() {
 
           <div className="col-span-1">
             <h2 className="mb-4 text-lg font-normal capitalize text-white 2xl:mb-[0.83vw] 2xl:text-[0.93vw]">
-              Support
+              {t('support')}
             </h2>
             <nav>
               <ul className="flex flex-col gap-2 text-lg font-medium 2xl:gap-[0.41vw] 2xl:text-[0.93vw]">
@@ -185,7 +186,7 @@ export default function Footer() {
                       pathname === item.path ? "text-[#fff422]" : ""
                     } cursor-pointer text-[#a1a1aa] transition-all duration-200 ease-in-out hover:text-[#fff422]`}
                   >
-                    <Link href={item.path}>{item.label}</Link>
+                    <Link href={item.path}>{t(`nav.${item.label}` as any)}</Link>
                   </li>
                 ))}
               </ul>
@@ -195,7 +196,7 @@ export default function Footer() {
 
         <div className="mt-4 px-4 text-center text-sm font-normal text-[#a1a1aa] md:mt-6 2xl:mt-[1.25vw] 2xl:text-[0.72vw]">
           <p className="flex justify-center items-center flex-wrap">
-            All rights reserved for DO &copy; {currentYear} — Designed and developed by
+            {t("rights", { year: currentYear })}
             <Image
               src="/Logo.svg"
               className="mx-1 inline-block object-contain 2xl:w-[2.08vw] 2xl:h-[1.04vw]"
@@ -210,3 +211,4 @@ export default function Footer() {
     </footer>
   );
 }
+
